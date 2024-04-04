@@ -7,6 +7,7 @@
     <title>Управление освещением - мобильное приложение</title>
 </head>
 <body>
+    <div class="container">
         <div class="mobile">
             <div class="mobile__top">
                 <img src="./img/top.svg">
@@ -24,13 +25,19 @@
                         </div>
                 </div>
                 </div>
-                <div class="groups">
-                    <div data-room="groupadd" class="group" onclick="ToggleMobile()">
-                        <i class="ic_plus"></i><span>Добавить группу</span>
+                <div class="groups" onclick="addMobile()">
+                    <div class="group">
+                        <i class="ic_plus"></i><span >Добавить группу</span>
                     </div>
+                </div>
+                <div class="deleteGroups">
+                    <div class="deleteGroup"><span >Удалить группу</span></div>
+                </div>
+                <div class="savedgroups">
                 </div>
             </div>
         </div>
-    <script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>   
 </body>
 </html>
