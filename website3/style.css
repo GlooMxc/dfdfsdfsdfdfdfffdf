@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+@import url('./fonts/icons/style.css');
+
+:root {
+    --color_bg: #e0e5eb;
+    --gradient: linear-gradient(to right, #a894e6, #7e77ee);
+    --grey: #f0f0f0;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #e0e5eb;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile {
+    width: 350px;
+    height: 730px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.4);
+    display: grid;
+    grid-template-rows: 48px 1fr 62px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile__top {
+    align-self: center;
+    justify-self: center;
+}
+
+.settings {
+    padding: 0 20px;
+}
+
+.settings_tabs {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 96px;
+    grid-gap: 14px;
+}
+
+.option {
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    background-color: var(--grey);
+    border-radius: 12px;
+}
+
+option i {
+    align-self: center;
+    font-size: 5em;
+    opacity: 0.7;
+}
+
+.switch {
+    transform: translateY(-50%);
+    margin-left: 27%; /* Уменьшаем отступ слева */
+    display: inline-block;
+    width: 45px; /* Уменьшаем ширину */
+    height: 18px; /* Уменьшаем высоту */
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px; /* Размер кружочка */
+    width: 14px; /* Размер кружочка */
+    left: 2px; /* Позиция кружочка */
+    bottom: 2px; /* Позиция кружочка */
+    background-color: white;
+    border-radius: 30%; /* Форма кружочка */
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(27px);
+    -ms-transform: translateX(27px);
+    transform: translateX(27px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.mobile__bottom {
+    position: relative;
+}
+
+
+/* Стили для кнопки "Назад" */
+.back-btn {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Псевдоэлемент крестика */
+.back-btn::before,
+.back-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+}
+
+/* Первое плечо крестика */
+.back-btn::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Второе плечо крестика */
+.back-btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* При наведении */
+.back-btn:hover {
+    transform: scale(1.1); /* Увеличиваем размер при наведении */
+}
+
+
+
+/* Стили для кнопки "Сохранить" */
+.save-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px; /* Добавляем отступ слева от кнопки "Сохранить" */
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+}
+
+/* При наведении */
+.save-btn:hover {
+    background-color: #0056b3; /* Изменение цвета кнопки "Сохранить" при наведении */
+}
+
+.button-wrapper {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center; /* Выравниваем элементы по горизонтали */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    gap: 20px; /* Добавляем промежуток между кнопками */
+}
+
+
+
+/* Добавляем стили для контента .mobile */
+.mobile__content {
+    border: 1px solid #ccc; /* Добавляем рамку для контента */
+    border-radius: 5px; /* Закругляем углы */
+    background-color: #f9f9f9; /* Задаем фоновый цвет */
+}
+
+.lamp-row {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.lamp-row div {
+    width: 45%;
+    padding: 5px;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lamp-on {
+    background-color: yellow; /* Или любой другой цвет, который вы хотите использовать */
+}

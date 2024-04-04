@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Управление освещением - мобильное приложение</title>
+</head>
+<body>
+    <div class="mobile">
+        <div class="mobile__top">
+            <img src="./img/top.svg">
+        </div>
+        <div class="mobile__content">
+            <div id="settings" class="settings">
+                <div class="settings_tabs">
+                    <div data-type="lights" class="option">
+                        <i class="ic_sun"></i>
+                        <label class="switch" for="lightSwitch">
+                            <input type="checkbox" id="lightSwitch">
+                            <span class="slider round"></span>   
+                        </label>
+                        <span>Лампы</span>
+                    </div>
+                    <div data-type="groupadd" class="option">
+                        <i class="ic_plus"></i>
+                        <span>Добавить группу</span>
+                    </div>
+                    <div data-type="groups" class="option">
+                        <i class="ic_paragraph-justify"></i>
+                        <span>Группа 1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile__bottom"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
