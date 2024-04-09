@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?je99al');
+  src:  url('fonts/icons.eot?je99al#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?je99al') format('truetype'),
+    url('fonts/icons.woff?je99al') format('woff'),
+    url('fonts/icons.svg?je99al#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic_cog:before {
+  content: "\e994";
+}
+.ic_plus:before {
+  content: "\ea0a";
+}
+.ic_minus:before {
+  content: "\ea0b";
+}
+.ic_paragraph-justify:before {
+  content: "\ea7a";
+}
+.ic_arrow:before {
+  content: "\e900";
+}
+.ic_bathroom:before {
+  content: "\e901";
+}
+.ic_bedroom:before {
+  content: "\e902";
+}
+.ic_bottom .path1:before {
+  content: "\e903";
+  color: rgb(255, 255, 255);
+}
+.ic_bottom .path2:before {
+  content: "\e904";
+  margin-left: -4.4052734375em;
+  color: rgb(45, 45, 45);
+}
+.ic_bottom .path3:before {
+  content: "\e905";
+  margin-left: -4.4052734375em;
+  color: rgb(45, 45, 45);
+}
+.ic_bottom .path4:before {
+  content: "\e906";
+  margin-left: -4.4052734375em;
+  color: rgb(45, 45, 45);
+}
+.ic_humidity:before {
+  content: "\e907";
+}
+.ic_kitchen:before {
+  content: "\e908";
+}
+.ic_livingroom:before {
+  content: "\e909";
+}
+.ic_power:before {
+  content: "\e90a";
+}
+.ic_studio:before {
+  content: "\e90b";
+}
+.ic_sun:before {
+  content: "\e90c";
+}
+.ic_temperature:before {
+  content: "\e90d";
+}
+.ic_washingroom:before {
+  content: "\e90e";
+}
